@@ -27,7 +27,7 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
 .tab-bar { background: var(--white); border-bottom: 1px solid var(--border); flex-shrink: 0; }
 .tab-bar-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; overflow-x: auto; scrollbar-width: none; }
 .tab-bar-inner::-webkit-scrollbar { display: none; }
-.tab-btn { display: flex; align-items: center; gap: 7px; padding: 0 1.1rem; height: 46px; font-size: 13px; font-family: var(--sans); font-weight: 400; color: var(--text-muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: color 0.15s, border-color 0.15s; }
+.tab-btn { display: flex; align-items: center; gap: 5px; padding: 0 0.7rem; height: 46px; font-size: 12px; font-family: var(--sans); font-weight: 400; color: var(--text-muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: color 0.15s, border-color 0.15s; }
 .tab-num { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; background: var(--bg); border-radius: 50%; font-size: 10px; color: var(--text-muted); font-weight: 500; transition: background 0.15s, color 0.15s; }
 .tab-btn:hover { color: var(--navy); }
 .tab-btn.active { color: var(--navy); border-bottom-color: var(--navy); font-weight: 500; }
@@ -145,14 +145,14 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
 <nav class="tab-bar">
   <div class="tab-bar-inner">
     <button class="tab-btn active" onclick="showPage('welcome')" data-page="welcome"><span class="tab-num">1</span> Welcome</button>
-    <button class="tab-btn" onclick="showPage('about')" data-page="about"><span class="tab-num">2</span> What Melita Is</button>
-    <button class="tab-btn" onclick="showPage('services')" data-page="services"><span class="tab-num">3</span> Services We Deliver</button>
-    <button class="tab-btn" onclick="showPage('team')" data-page="team"><span class="tab-num">4</span> Your Dedicated Team</button>
-    <button class="tab-btn" onclick="showPage('howtouse')" data-page="howtouse"><span class="tab-num">5</span> How We Help You</button>
-    <button class="tab-btn" onclick="showPage('tactical')" data-page="tactical"><span class="tab-num">6</span> Is Melita Right?</button>
-    <button class="tab-btn" onclick="showPage('benefits')" data-page="benefits"><span class="tab-num">7</span> Your Network Benefits</button>
-    <button class="tab-btn" onclick="showPage('philosophy')" data-page="philosophy"><span class="tab-num">8</span> Network Philosophy</button>
-    <button class="tab-btn" onclick="showPage('collective')" data-page="collective"><span class="tab-num">9</span> The Collective</button>
+    <button class="tab-btn" onclick="showPage('about')" data-page="about"><span class="tab-num">2</span> What We Are</button>
+    <button class="tab-btn" onclick="showPage('services')" data-page="services"><span class="tab-num">3</span> Services</button>
+    <button class="tab-btn" onclick="showPage('team')" data-page="team"><span class="tab-num">4</span> Our Team</button>
+    <button class="tab-btn" onclick="showPage('howtouse')" data-page="howtouse"><span class="tab-num">5</span> How It Works</button>
+    <button class="tab-btn" onclick="showPage('tactical')" data-page="tactical"><span class="tab-num">6</span> Client Fit</button>
+    <button class="tab-btn" onclick="showPage('benefits')" data-page="benefits"><span class="tab-num">7</span> Benefits</button>
+    <button class="tab-btn" onclick="showPage('philosophy')" data-page="philosophy"><span class="tab-num">8</span> Philosophy</button>
+    <button class="tab-btn" onclick="showPage('collective')" data-page="collective"><span class="tab-num">9</span> Collective</button>
     <button class="tab-btn" onclick="showPage('contact')" data-page="contact"><span class="tab-num">10</span> Contact</button>
     <button class="tab-btn" onclick="showPage('resources')" data-page="resources"><span class="tab-num">11</span> Resources</button>
   </div>
