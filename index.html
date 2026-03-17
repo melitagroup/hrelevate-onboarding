@@ -126,6 +126,10 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
   .collective-card { padding: 1.5rem; }
   .header-contact { display: none; }
 }
+
+.service-card h3 a{color:inherit;text-decoration:none;}
+.service-card h3 a:hover{text-decoration:underline;}
+
 </style>
 </head>
 <body>
@@ -219,6 +223,11 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
         </div>
       </div>
       <div class="quote-block"><p>"Most HR consultants can tell you what to do. I can also make sure it actually gets done through my partnership with Melita, you get a full HR operating layer behind the scenes, without adding headcount or complexity."</p><cite> Suggested language for your client conversations</cite></div>
+      <div style="background:var(--navy-pale);border:1px solid #c5d5ee;border-radius:12px;padding:1.5rem;">
+        <div style="font-size:14px;font-weight:500;color:var(--navy);margin-bottom:6px;">Referring a client is simple</div>
+        <p style="font-size:14px;color:var(--text-mid);line-height:1.65;">If you have a client who may need Melita's support, reach out to Adrienne directly at <a href="mailto:aschleigh@melitagroup.com" style="color:var(--navy);font-weight:500;">aschleigh@melitagroup.com</a> or put time on her calendar. You earn <strong>$3,000 annually per client</strong> for as long as they remain with Melita.</p>
+        <a href="https://melitagroup.github.io/hrelevate-calculator/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:500;color:#fff;background:var(--navy);padding:7px 14px;border-radius:7px;text-decoration:none;" onmouseover="this.style.background='#2a5199'" onmouseout="this.style.background='var(--navy)'">See the referral revenue calculator &rarr;</a>
+      </div>
       <div style="margin-top:1.75rem;background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;">
         <div style="font-size:14px;color:var(--text-mid);">See everything we offer your clients</div>
         <button onclick="showPage('services')" style="background:var(--navy);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-size:13px;cursor:pointer;font-family:var(--sans);font-weight:500;">View Services &rarr;</button>
@@ -240,12 +249,12 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
         <p style="font-size:14px;color:var(--navy);line-height:1.6;margin:0;"><strong>Every service page below links directly to Melita.</strong> Click the boxes if you would like to learn more about any service areas.</p>
       </div>
       <div class="service-grid">
-        <a class="service-card" href="https://melitagroup.com/hr-solution" target="_blank" rel="noopener noreferrer"><h3>HR Operations &amp; Compliance</h3><ul><li>Full-service HR administration and compliance oversight</li><li>Custom employee handbooks, I-9/FLSA audits, government filings</li><li>Leave of absence management and ADA/FMLA guidance</li><li>Employee relations: documentation, PIPs/BIPs, policy enforcement</li><li>Federal, state, and local notice distribution and training tracking</li></ul></a>
-        <a class="service-card orange-left" href="https://melitagroup.com/payroll-solution" target="_blank" rel="noopener noreferrer"><h3>Payroll &amp; Tax Administration</h3><ul><li>End-to-end payroll management: timecards, deductions, adjustments</li><li>Multi-state/federal tax compliance with on-time filings</li><li>W-2 generation, year-end support, and legislative monitoring</li></ul></a>
-        <a class="service-card orange-left" href="https://melitagroup.com/benefits-solution" target="_blank" rel="noopener noreferrer"><h3>Benefits Strategy &amp; Advisory</h3><ul><li>Annual market benchmarking against top carriers</li><li>Strategic consulting on plan design, network access, and cost</li><li>Expert carrier negotiation for competitive pricing</li><li>Legislative monitoring and international benefits alignment</li></ul></a>
-        <a class="service-card" href="https://melitagroup.com/benefits-solution" target="_blank" rel="noopener noreferrer"><h3>Benefits Administration &amp; Compliance</h3><ul><li>Full Open Enrollment coordination with custom communication</li><li>Day-to-day eligibility, elections, and life event management</li><li>ACA, ERISA, SPD/WRAP, and Form 5500 compliance</li><li>Carrier invoice auditing and reconciliation</li></ul></a>
-        <a class="service-card" href="https://melitagroup.com/technology" target="_blank" rel="noopener noreferrer"><h3>HR Technology Implementation</h3><ul><li>Full migration, setup, and configuration of HRIS systems</li><li>Employee portals, benefit enrollment, and vendor integrations</li><li>Ongoing tech support clients never have to call the vendor</li></ul></a>
-        <a class="service-card orange-left" href="https://melitagroup.com/international-solution" target="_blank" rel="noopener noreferrer"><h3>Global HR &amp; Payroll Support</h3><ul><li>Localized payroll setup and management in foreign entities</li><li>Employment contracts, PTO policies, onboarding, terminations</li><li>Country-specific HR compliance filings and ongoing guidance</li></ul></a>
+        <div class="service-card"><h3><a href="https://melitagroup.com/hr-solution" target="_blank" rel="noopener noreferrer">HR Operations &amp; Compliance</a></h3><ul><li>Full-service HR administration and compliance oversight</li><li>Custom employee handbooks, I-9/FLSA audits, government filings</li><li>Leave of absence management and ADA/FMLA guidance</li><li>Employee relations: documentation, PIPs/BIPs, policy enforcement</li><li>Federal, state, and local notice distribution and training tracking</li></ul></div>
+        <div class="service-card orange-left"><h3><a href="https://melitagroup.com/payroll-solution" target="_blank" rel="noopener noreferrer">Payroll &amp; Tax Administration</a></h3><ul><li>End-to-end payroll management: timecards, deductions, adjustments</li><li>Multi-state/federal tax compliance with on-time filings</li><li>W-2 generation, year-end support, and legislative monitoring</li></ul></div>
+        <div class="service-card orange-left"><h3><a href="https://melitagroup.com/benefits-solution" target="_blank" rel="noopener noreferrer">Benefits Strategy &amp; Advisory</a></h3><ul><li>Annual market benchmarking against top carriers</li><li>Strategic consulting on plan design, network access, and cost</li><li>Expert carrier negotiation for competitive pricing</li><li>Legislative monitoring and international benefits alignment</li></ul></div>
+        <div class="service-card"><h3><a href="https://melitagroup.com/benefits-solution" target="_blank" rel="noopener noreferrer">Benefits Administration &amp; Compliance</a></h3><ul><li>Full Open Enrollment coordination with custom communication</li><li>Day-to-day eligibility, elections, and life event management</li><li>ACA, ERISA, SPD/WRAP, and Form 5500 compliance</li><li>Carrier invoice auditing and reconciliation</li></ul></div>
+        <div class="service-card"><h3><a href="https://melitagroup.com/technology" target="_blank" rel="noopener noreferrer">HR Technology Implementation</a></h3><ul><li>Full migration, setup, and configuration of HRIS systems</li><li>Employee portals, benefit enrollment, and vendor integrations</li><li>Ongoing tech support clients never have to call the vendor</li></ul></div>
+        <div class="service-card orange-left"><h3><a href="https://melitagroup.com/international-solution" target="_blank" rel="noopener noreferrer">Global HR &amp; Payroll Support</a></h3><ul><li>Localized payroll setup and management in foreign entities</li><li>Employment contracts, PTO policies, onboarding, terminations</li><li>Country-specific HR compliance filings and ongoing guidance</li></ul></div>
       </div>
       <div class="broker-banner"><h3>Licensed Broker &amp; PEO Transition Partner</h3><p>Melita is a <strong>licensed benefits broker</strong> and <strong>certified PEO broker</strong>. We operate on a transparent PEPM model and credit 100% of commission fees back to the client our recommendations follow client needs, not carrier incentives. We also guide clients smoothly into and out of PEO relationships.</p></div>
       <div class="quote-block"><p>"If your HR systems are a patchwork of platforms that don't talk to each other, you don't need to untangle it alone. I'll guide the strategy and through my partnership with Melita, you get access to a fully integrated HR infrastructure that actually works."</p><cite> Suggested language for your client conversations</cite></div>
@@ -293,11 +302,6 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
         </tbody>
       </table>
       <div class="quote-block"><p>"My clients don't just get my expertise — they get an entire HR operations team behind it. Melita handles the day-to-day execution so I can stay focused on what moves the needle for your business."</p><cite> Suggested language for your client conversations</cite></div>
-      <div style="background:var(--navy-pale);border:1px solid #c5d5ee;border-radius:12px;padding:1.5rem;">
-        <div style="font-size:14px;font-weight:500;color:var(--navy);margin-bottom:6px;">Referring a client is simple</div>
-        <p style="font-size:14px;color:var(--text-mid);line-height:1.65;">If you have a client who may need Melita's support, reach out to Adrienne directly at <a href="mailto:aschleigh@melitagroup.com" style="color:var(--navy);font-weight:500;">aschleigh@melitagroup.com</a> or put time on her calendar. You earn <strong>$3,000 annually per client</strong> for as long as they remain with Melita.</p>
-        <a href="https://melitagroup.github.io/hrelevate-calculator/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:500;color:#fff;background:var(--navy);padding:7px 14px;border-radius:7px;text-decoration:none;" onmouseover="this.style.background='#2a5199'" onmouseout="this.style.background='var(--navy)'">See the referral revenue calculator &rarr;</a>
-      </div>
       <div style="background:var(--navy);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0;"><p style="font-family:var(--serif);font-style:italic;font-size:15px;color:#fff;line-height:1.7;margin:0;">"Melita ensures high-touch execution. You remain the trusted, strategic voice."</p></div>
 
       <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:flex-end;">
