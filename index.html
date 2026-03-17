@@ -16,7 +16,7 @@
 }
 html, body { height: 100%; overflow: hidden; }
 body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.6; font-size: 16px; display: flex; flex-direction: column; }
-.site-header { background: var(--navy); flex-shrink: 0; border-bottom: 1px solid rgba(255,255,255,0.1); position: relative; z-index: 20; }
+.site-header { background: var(--navy); flex-shrink: 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 58px; }
 .logo { display: flex; align-items: center; gap: 12px; background: none; border: none; cursor: pointer; padding: 0; }
 .logo-divider { border-left: 1px solid rgba(255,255,255,0.2); padding-left: 12px; }
@@ -24,7 +24,7 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
 .header-contact { font-size: 12px; color: rgba(255,255,255,0.5); }
 .header-contact a { color: var(--orange); text-decoration: none; }
 .header-contact a:hover { text-decoration: underline; }
-.tab-bar { background: var(--white); border-bottom: 1px solid var(--border); flex-shrink: 0; position: relative; z-index: 20; }
+.tab-bar { background: var(--white); border-bottom: 1px solid var(--border); flex-shrink: 0; }
 .tab-bar-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; overflow-x: auto; scrollbar-width: none; }
 .tab-bar-inner::-webkit-scrollbar { display: none; }
 .tab-btn { display: flex; align-items: center; gap: 5px; padding: 0 0.7rem; height: 46px; font-size: 12px; font-family: var(--sans); font-weight: 400; color: var(--text-muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: color 0.15s, border-color 0.15s; }
@@ -32,7 +32,7 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
 .tab-btn:hover { color: var(--navy); }
 .tab-btn.active { color: var(--navy); border-bottom-color: var(--navy); font-weight: 500; }
 .tab-btn.active .tab-num { background: var(--navy); color: #fff; }
-.pages-wrap { flex: 1; overflow: hidden; position: relative; z-index: 1; }
+.pages-wrap { flex: 1; overflow: hidden; position: relative; }
 .page { display: none; height: 100%; overflow-y: auto; padding: 2.5rem 2rem 3rem; }
 .page.active { display: block; }
 .page-inner { max-width: 960px; margin: 0 auto; }
@@ -62,6 +62,8 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
 .qn-arrow { font-size: 18px; color: var(--orange); flex-shrink: 0; }
 .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 1.5rem; }
 .service-card { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--navy); border-radius: 12px; padding: 1.3rem 1.4rem; }
+a.service-card { display:block; text-decoration:none; color:inherit; transition:border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+a.service-card:hover { border-color: var(--navy); box-shadow: 0 8px 18px rgba(26, 47, 93, 0.08); transform: translateY(-1px); }
 .service-card.orange-left { border-left-color: var(--orange); }
 .service-card h3 { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 0.6rem; }
 .service-card ul { list-style: none; }
@@ -219,11 +221,6 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
         </div>
       </div>
       <div class="quote-block"><p>"Most HR consultants can tell you what to do. I can also make sure it actually gets done through my partnership with Melita, you get a full HR operating layer behind the scenes, without adding headcount or complexity."</p><cite> Suggested language for your client conversations</cite></div>
-      <div style="background:var(--navy-pale);border:1px solid #c5d5ee;border-radius:12px;padding:1.5rem;">
-        <div style="font-size:14px;font-weight:500;color:var(--navy);margin-bottom:6px;">Referring a client is simple</div>
-        <p style="font-size:14px;color:var(--text-mid);line-height:1.65;">If you have a client who may need Melita's support, reach out to Adrienne directly at <a href="mailto:aschleigh@melitagroup.com" style="color:var(--navy);font-weight:500;">aschleigh@melitagroup.com</a> or put time on her calendar. You earn <strong>$3,000 annually per client</strong> for as long as they remain with Melita.</p>
-        <a href="https://melitagroup.github.io/hrelevate-calculator/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:500;color:#fff;background:var(--navy);padding:7px 14px;border-radius:7px;text-decoration:none;" onmouseover="this.style.background='#2a5199'" onmouseout="this.style.background='var(--navy)'">See the referral revenue calculator &rarr;</a>
-      </div>
       <div style="margin-top:1.75rem;background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;">
         <div style="font-size:14px;color:var(--text-mid);">See everything we offer your clients</div>
         <button onclick="showPage('services')" style="background:var(--navy);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-size:13px;cursor:pointer;font-family:var(--sans);font-weight:500;">View Services &rarr;</button>
@@ -241,14 +238,13 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
       <div class="page-eyebrow">What we deliver</div>
       <h2 class="page-title">Services we provide to your clients</h2>
       <p class="page-lead">Melita's modular approach means clients can engage any combination of services and add or remove them as their needs evolve.</p>
-      <div class="broker-banner" style="margin-top:1rem;margin-bottom:1.5rem;background:var(--navy-pale);border:1px solid #c5d5ee;"><p style="margin:0;font-size:14px;line-height:1.6;color:var(--navy);font-weight:500;">Every service page below links directly to Melita. Click the boxes if you would like to learn more about any service areas.</p></div>
       <div class="service-grid">
-        <div class="service-card"><h3>HR Operations &amp; Compliance</h3><ul><li>Full-service HR administration and compliance oversight</li><li>Custom employee handbooks, I-9/FLSA audits, government filings</li><li>Leave of absence management and ADA/FMLA guidance</li><li>Employee relations: documentation, PIPs/BIPs, policy enforcement</li><li>Federal, state, and local notice distribution and training tracking</li></ul></div>
-        <div class="service-card orange-left"><h3>Payroll &amp; Tax Administration</h3><ul><li>End-to-end payroll management: timecards, deductions, adjustments</li><li>Multi-state/federal tax compliance with on-time filings</li><li>W-2 generation, year-end support, and legislative monitoring</li></ul></div>
-        <div class="service-card orange-left"><h3>Benefits Strategy &amp; Advisory</h3><ul><li>Annual market benchmarking against top carriers</li><li>Strategic consulting on plan design, network access, and cost</li><li>Expert carrier negotiation for competitive pricing</li><li>Legislative monitoring and international benefits alignment</li></ul></div>
-        <div class="service-card"><h3>Benefits Administration &amp; Compliance</h3><ul><li>Full Open Enrollment coordination with custom communication</li><li>Day-to-day eligibility, elections, and life event management</li><li>ACA, ERISA, SPD/WRAP, and Form 5500 compliance</li><li>Carrier invoice auditing and reconciliation</li></ul></div>
-        <div class="service-card"><h3>HR Technology Implementation</h3><ul><li>Full migration, setup, and configuration of HRIS systems</li><li>Employee portals, benefit enrollment, and vendor integrations</li><li>Ongoing tech support clients never have to call the vendor</li></ul></div>
-        <div class="service-card orange-left"><h3>Global HR &amp; Payroll Support</h3><ul><li>Localized payroll setup and management in foreign entities</li><li>Employment contracts, PTO policies, onboarding, terminations</li><li>Country-specific HR compliance filings and ongoing guidance</li></ul></div>
+        <a class="service-card" href="https://melitagroup.com/hr-solution" target="_blank" rel="noopener noreferrer"><h3>HR Operations &amp; Compliance</h3><ul><li>Full-service HR administration and compliance oversight</li><li>Custom employee handbooks, I-9/FLSA audits, government filings</li><li>Leave of absence management and ADA/FMLA guidance</li><li>Employee relations: documentation, PIPs/BIPs, policy enforcement</li><li>Federal, state, and local notice distribution and training tracking</li></ul></a>
+        <a class="service-card orange-left" href="https://melitagroup.com/payroll-solution" target="_blank" rel="noopener noreferrer"><h3>Payroll &amp; Tax Administration</h3><ul><li>End-to-end payroll management: timecards, deductions, adjustments</li><li>Multi-state/federal tax compliance with on-time filings</li><li>W-2 generation, year-end support, and legislative monitoring</li></ul></a>
+        <a class="service-card orange-left" href="https://melitagroup.com/benefits-solution" target="_blank" rel="noopener noreferrer"><h3>Benefits Strategy &amp; Advisory</h3><ul><li>Annual market benchmarking against top carriers</li><li>Strategic consulting on plan design, network access, and cost</li><li>Expert carrier negotiation for competitive pricing</li><li>Legislative monitoring and international benefits alignment</li></ul></a>
+        <a class="service-card" href="https://melitagroup.com/benefits-solution" target="_blank" rel="noopener noreferrer"><h3>Benefits Administration &amp; Compliance</h3><ul><li>Full Open Enrollment coordination with custom communication</li><li>Day-to-day eligibility, elections, and life event management</li><li>ACA, ERISA, SPD/WRAP, and Form 5500 compliance</li><li>Carrier invoice auditing and reconciliation</li></ul></a>
+        <a class="service-card" href="https://melitagroup.com/technology" target="_blank" rel="noopener noreferrer"><h3>HR Technology Implementation</h3><ul><li>Full migration, setup, and configuration of HRIS systems</li><li>Employee portals, benefit enrollment, and vendor integrations</li><li>Ongoing tech support clients never have to call the vendor</li></ul></a>
+        <a class="service-card orange-left" href="https://melitagroup.com/international-solution" target="_blank" rel="noopener noreferrer"><h3>Global HR &amp; Payroll Support</h3><ul><li>Localized payroll setup and management in foreign entities</li><li>Employment contracts, PTO policies, onboarding, terminations</li><li>Country-specific HR compliance filings and ongoing guidance</li></ul></a>
       </div>
       <div class="broker-banner"><h3>Licensed Broker &amp; PEO Transition Partner</h3><p>Melita is a <strong>licensed benefits broker</strong> and <strong>certified PEO broker</strong>. We operate on a transparent PEPM model and credit 100% of commission fees back to the client our recommendations follow client needs, not carrier incentives. We also guide clients smoothly into and out of PEO relationships.</p></div>
       <div class="quote-block"><p>"If your HR systems are a patchwork of platforms that don't talk to each other, you don't need to untangle it alone. I'll guide the strategy and through my partnership with Melita, you get access to a fully integrated HR infrastructure that actually works."</p><cite> Suggested language for your client conversations</cite></div>
@@ -294,7 +290,11 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
         </tbody>
       </table>
       <div class="quote-block"><p>"My clients don't just get my expertise — they get an entire HR operations team behind it. Melita handles the day-to-day execution so I can stay focused on what moves the needle for your business."</p><cite> Suggested language for your client conversations</cite></div>
-
+      <div style="background:var(--navy-pale);border:1px solid #c5d5ee;border-radius:12px;padding:1.5rem;">
+        <div style="font-size:14px;font-weight:500;color:var(--navy);margin-bottom:6px;">Referring a client is simple</div>
+        <p style="font-size:14px;color:var(--text-mid);line-height:1.65;">If you have a client who may need Melita's support, reach out to Adrienne directly at <a href="mailto:aschleigh@melitagroup.com" style="color:var(--navy);font-weight:500;">aschleigh@melitagroup.com</a> or put time on her calendar. You earn <strong>$3,000 annually per client</strong> for as long as they remain with Melita.</p>
+        <a href="https://melitagroup.github.io/hrelevate-calculator/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:500;color:#fff;background:var(--navy);padding:7px 14px;border-radius:7px;text-decoration:none;" onmouseover="this.style.background='#2a5199'" onmouseout="this.style.background='var(--navy)'">See the referral revenue calculator &rarr;</a>
+      </div>
       <div style="background:var(--navy);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0;"><p style="font-family:var(--serif);font-style:italic;font-size:15px;color:#fff;line-height:1.7;margin:0;">"Melita ensures high-touch execution. You remain the trusted, strategic voice."</p></div>
 
       <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:flex-end;">
@@ -575,46 +575,4 @@ function tUpdateSummary() {
   if(nos>=2) { bookBtn.style.display='inline-block'; } else { bookBtn.style.display='none'; }
 }
 
-renderT();
-
-function showPage(pageName) {
-  document.querySelectorAll('.page').forEach(function(page) {
-    page.classList.remove('active');
-  });
-  document.querySelectorAll('.tab-btn').forEach(function(tab) {
-    tab.classList.remove('active');
-  });
-
-  var targetPage = document.getElementById('page-' + pageName);
-  var targetTab = document.querySelector('.tab-btn[data-page="' + pageName + '"]');
-
-  if (targetPage) {
-    targetPage.classList.add('active');
-    targetPage.scrollTop = 0;
-  }
-  if (targetTab) {
-    targetTab.classList.add('active');
-    if (typeof targetTab.scrollIntoView === 'function') {
-      targetTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    }
-  }
-
-  if (typeof window !== 'undefined' && window.scrollTo) {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-}
-
-document.querySelectorAll('button').forEach(function(btn) {
-  if (!btn.getAttribute('type')) btn.setAttribute('type', 'button');
-});
-
-document.querySelectorAll('.tab-btn').forEach(function(tab) {
-  tab.addEventListener('click', function(event) {
-    event.preventDefault();
-    var pageName = tab.getAttribute('data-page');
-    if (pageName) showPage(pageName);
-  });
-});
-</script>
-</body>
-</html>
+renderT(
