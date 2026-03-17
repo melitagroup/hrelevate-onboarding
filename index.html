@@ -490,7 +490,7 @@ body { font-family: var(--sans); color: var(--text); background: var(--bg); line
 
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 var tData = [
   {q:"Does your client have a system for resolving employee questions payroll, benefits, or workplace issues in a timely and visible way?",cat:"Benefits and Leave",melita:"Provides live employee support and resolution tracking across HR, payroll, benefits, and tech issues."},
   {q:"Are your client's benefits communications clear and customized during open enrollment and life events?",cat:"Benefits and Leave",melita:"Manages open enrollment campaigns, custom materials, and day-to-day benefits questions."},
@@ -572,16 +572,4 @@ function tUpdateSummary() {
   if(nos>=2) { bookBtn.style.display='inline-block'; } else { bookBtn.style.display='none'; }
 }
 
-renderT();
-
-function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
-  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
-  var page = document.getElementById('page-' + pageId);
-  var btn = document.querySelector('[data-page="' + pageId + '"]');
-  if(page) { page.classList.add('active'); page.scrollTop=0; }
-  if(btn) { btn.classList.add('active'); btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'}); }
-}
-</script>
-</body>
-</html>
+renderT(
